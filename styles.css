@@ -1,0 +1,99 @@
+:root {
+  --bg: #0f4fa8;
+  --panel: #1f3350;
+  --line: #6d8db7;
+  --text: #eaf2ff;
+  --accent: #ffd166;
+  --warn: #ff595e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #2a70c9, var(--bg));
+  color: var(--text);
+}
+
+.app {
+  width: min(95vw, 920px);
+  display: grid;
+  gap: 1rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+.subtitle {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1.6fr repeat(2, 130px) 150px;
+  gap: 0.75rem;
+  align-items: end;
+  padding: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--panel), transparent 8%);
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+input,
+button {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.55rem;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: var(--accent);
+  color: #1b1b1b;
+  font-weight: 700;
+}
+
+.board-preview {
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  background: #102236;
+  padding: 0.6rem;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  max-height: 72vh;
+  display: block;
+  margin: 0 auto;
+}
+
+.result {
+  margin: 0;
+  font-weight: 600;
+}
+
+.result.warn {
+  color: var(--warn);
+}
+
+@media (max-width: 760px) {
+  .controls {
+    grid-template-columns: 1fr 1fr;
+  }
+}

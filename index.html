@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Solver</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Memory Solver</h1>
+    <p class="subtitle">Загрузите скриншот поля, и программа найдёт 2 одинаковые картинки.</p>
+
+    <section class="controls">
+      <label>
+        Скриншот поля
+        <input id="imageInput" type="file" accept="image/*" />
+      </label>
+      <label>
+        Рядов
+        <input id="rowsInput" type="number" min="2" max="10" value="4" />
+      </label>
+      <label>
+        Колонок
+        <input id="colsInput" type="number" min="2" max="10" value="3" />
+      </label>
+      <button id="solveBtn" type="button">Найти пару</button>
+    </section>
+
+    <section class="board-preview">
+      <canvas id="canvas"></canvas>
+    </section>
+
+    <p id="result" class="result">Ожидание изображения…</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
